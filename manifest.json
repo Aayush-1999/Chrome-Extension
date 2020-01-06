@@ -1,23 +1,22 @@
 {
-    "manifest_version" : 2 ,
     "name" : "Extension" ,
     "version" : "1.0" ,
     "description" :
         "To fetch json data on clicking chrome extension." ,
-    "icons" : {
-        "16" : "ttw16.png" ,
-        "48" : "ttw48.png" ,
-        "128" : "ttw128.png"
-    } ,
     "browser_action":{
-    	"default_icon": "ttw16.png"
+    	"default_icon": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+          }
     },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ],
+    "icons": {
+        "16": "images/get_started16.png",
+        "32": "images/get_started32.png",
+        "48": "images/get_started48.png",
+        "128": "images/get_started128.png"
+      },
    "background":{
         "scripts":["background.js"],
         "persistent": false
@@ -25,5 +24,6 @@
     "chrome_url_overrides": {
         "newtab": "index.html"
     },
-    "permissions":["tabs"]
+    "permissions":["tabs"],
+    "manifest_version" : 2
 }
