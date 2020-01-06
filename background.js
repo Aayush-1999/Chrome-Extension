@@ -1,9 +1,4 @@
-chrome.browserAction.onClicked.addListener(buttonClicked)
-
-function buttonClicked(tab){
-	console.log("button clicked");
-	let msg={
-		txt:"hello"
-	}
-	chrome.tabs.sendMessage(tab.id,msg);
-}
+chrome.browserAction.onClicked.addListener(function(tab){
+    var newURL = "file:///D:/Aayush/Backend_learning/chrome_extension/index.html";
+    chrome.tabs.create({ url: newURL });
+});
