@@ -1,0 +1,21 @@
+body{
+    background: rgb(211,217,226);
+    background: linear-gradient(90deg, rgba(211,217,226,1) 0%, rgba(34,32,32,1) 17%);
+    margin: 5rem;
+}
+
+.card{
+    color: white;
+    margin: 0 auto;
+    width: 25%;
+    text-align: center;
+    border: 1px solid white;
+    box-shadow: 1px 2px 0px 0px #dcdcdc;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+}
+
+.info{
+    float: left;
+    margin-top: 10px
+}
