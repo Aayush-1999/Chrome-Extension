@@ -1,0 +1,29 @@
+{
+    "manifest_version" : 2 ,
+    "name" : "Extension" ,
+    "version" : "1.0" ,
+    "description" :
+        "To fetch json data on clicking chrome extension." ,
+    "icons" : {
+        "16" : "ttw16.png" ,
+        "48" : "ttw48.png" ,
+        "128" : "ttw128.png"
+    } ,
+    "browser_action":{
+    	"default_icon": "ttw16.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+   "background":{
+        "scripts":["background.js"],
+        "persistent": false
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "permissions":["tabs"]
+}
